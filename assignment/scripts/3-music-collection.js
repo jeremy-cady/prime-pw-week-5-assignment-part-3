@@ -35,11 +35,33 @@ function showCollection( array ) {
     console.log('Number of albums in the collection:', array.length);
 
     for (let element of array) {
-        console.log(`${element.title} by ${element.artist}, published in ${element.year}`);   
+        console.log(`${element.title} by ${element.artist}, published in ${element.yearPublished}`);   
     }
 }
-
+// test 'showCollection' function on the 'collection' array
 showCollection(collection);
+
+function findByArtist( artist, array ) {
+    console.log('In findByArtist', artist);
+    resultsArray = [];
+
+    for( let element of array ) {
+        if (element.artist === artist) {
+            resultsArray.push(element);
+        }
+    }
+    return resultsArray;
+}
+findByArtist( 'Jacob Collier', collection );
+console.log(resultsArray);
+findByArtist( 'Prince', collection );
+console.log(resultsArray);
+findByArtist( 'Dirty Loops', collection );
+console.log( resultsArray );
+findByArtist( 'Michael Jackson', collection );
+console.log(resultsArray);
+
+
 
 
 
