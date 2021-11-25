@@ -41,10 +41,14 @@ function showCollection( array ) {
 // test 'showCollection' function on the 'collection' array
 showCollection(collection);
 
+// write a function that takes in an 'artist' string value and compares it against the 'artist' 
+// atributes of all album Objects. If they match, push the array object to a new array named 
+// 'resultsArray'. If there are no matches return an empty array.
 function findByArtist( artist, array ) {
     console.log('In findByArtist', artist);
     resultsArray = [];
 
+    // loop through array to find matches
     for( let element of array ) {
         if (element.artist === artist) {
             resultsArray.push(element);
@@ -52,6 +56,8 @@ function findByArtist( artist, array ) {
     }
     return resultsArray;
 }
+
+// test 'findByArtist' function
 findByArtist( 'Jacob Collier', collection );
 console.log(resultsArray);
 findByArtist( 'Prince', collection );
@@ -60,6 +66,8 @@ findByArtist( 'Dirty Loops', collection );
 console.log( resultsArray );
 findByArtist( 'Michael Jackson', collection );
 console.log(resultsArray);
+
+
 
 
 
